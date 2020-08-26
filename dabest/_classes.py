@@ -54,12 +54,12 @@ class Dabest(object):
             all_plot_groups = pd.unique([tt for t in idx for tt in t]).tolist()
             
             actual_groups_given = sum([len(i) for i in idx])
-            
-            if actual_groups_given > len(all_plot_groups):
-                err0 = 'Groups are repeated across tuples,'
-                err1 = ' or a tuple has repeated groups in it.'
-                err2 = ' Please remove any duplicates and try again.'
-                raise ValueError(err0 + err1 + err2)
+            # comments lines to permit the repetition of name groups through analysis
+            #if actual_groups_given > len(all_plot_groups):
+            #    err0 = 'Groups are repeated across tuples,'
+            #    err1 = ' or a tuple has repeated groups in it.'
+            #    err2 = ' Please remove any duplicates and try again.'
+            #    raise ValueError(err0 + err1 + err2)
 
         else: # mix of string and tuple?
             err = 'There seems to be a problem with the idx you'
